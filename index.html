@@ -1,48 +1,33 @@
 <html>
-
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-
 <div>
-
   <h1 id="msg"></h1>
-
   <h4>-------------</h4>
- 
   <h1 id="msg2"></h1>
-  
 </div>
-
 
 <script>
 ///////// . Decimal to Binary. /////////////
 var x = 14;
 var remainder = 0;
 
-function binary(x){
-  
+function binary(x){  
   remainder = x % 2;
-  
   if(remainder==0){
-    
     $('#msg').prepend('0');
-    
   }else{
-        
     x--;
     $('#msg').prepend('1');
-      
   }
-  
   x = x/2;
-  
+ 
   if(x!=0){
     binary(x);
-  }
-  
+  } 
 }
 
 binary(x);
